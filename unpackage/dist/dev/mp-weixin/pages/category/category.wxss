@@ -25,8 +25,6 @@
 /* 透明度 */
 /* 文章场景相关 */
 .scroll-container {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
 }
 .scroll-container .scroll-view-left {
@@ -51,25 +49,15 @@
   padding: 15px 0;
 }
 .sRight-lv3 {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-wrap: wrap;
-          flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .sRight-lv3 .sRight-item {
   width: 33.33%;
   margin-bottom: 10px;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 .sRight-lv3 image {
   width: 60px;
@@ -78,3 +66,4 @@
 .sRight-lv3 text {
   font-size: 12px;
 }
+

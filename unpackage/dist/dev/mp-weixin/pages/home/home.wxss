@@ -122,6 +122,24 @@
 
 
 
+
+
+
+
+
+
+
+
+
+/* search */
+.search-box{
+	/* 吸顶 */
+	position: -webkit-sticky;
+	position: sticky;
+	top:0;
+	/* 提高阶层，防止覆盖 */
+	z-index:999;
+}
 /* swiper */
 swiper {
 	height: 360rpx;
@@ -173,8 +191,6 @@ swiper {
 	border-left: 10rpx solid #74EEFD;
 }
 .content-list{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
 	padding: 10rpx 0rpx;
 }
@@ -194,13 +210,9 @@ swiper {
 	/* background-color: #007AFF; */
 }
 .content-right-item{
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-flex-wrap: wrap;
-	        flex-wrap: wrap;
-	-webkit-justify-content: space-around;
-	        justify-content: space-around;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 .right-item{
 	margin-bottom: 10rpx;

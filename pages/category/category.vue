@@ -1,5 +1,8 @@
 <template>
 	<view>
+		<!-- 搜索 -->
+		<mySearch @click="toSearch"></mySearch>
+		
 		<view class="scroll-container">
 				<!-- 左侧滑动 -->
 				<scroll-view class="scroll-view-left" scroll-y="true" :style="{height:wh+'px'}">
@@ -45,7 +48,7 @@
 		onLoad(){
 			const sysInfo = uni.getSystemInfoSync()
 			console.log(sysInfo);
-			this.wh =  sysInfo.windowHeight
+			this.wh =  sysInfo.windowHeight - 44
 			
 			// 调用
 			this.getCategory()
@@ -77,7 +80,13 @@
 				uni.navigateTo({
 					url:'/subpkg/goods_detail/goods_detail?cid='+item3.c_id
 				})
-				
+			},
+			//跳转
+			toSearch(){
+				// console.log('success')
+				uni.navigateTo({
+					url:'/subpkg/search/search'
+				})
 			}
 		}
 	}

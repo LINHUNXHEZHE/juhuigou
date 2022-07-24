@@ -4,8 +4,7 @@ import App from './App'
 import { $http } from '@escook/request-miniprogram'
 
 uni.$http = $http
-// $http.baseUrl = "http://127.0.0.1:3000"
-$http.baseUrl = "http://us-or-cera-1.natfrp.cloud:16961"
+$http.baseUrl = "http://127.0.0.1:3000"
 
 // 请求开始之前做一些事情
 $http.beforeRequest = function (options) {

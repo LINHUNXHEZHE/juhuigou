@@ -1,6 +1,10 @@
 <template>
-	
 	<view>
+		<!-- 搜索组件 -->
+		<view class="search-box" >
+			<mySearch @click="toSearch"></mySearch>
+		</view>
+		
 		<!-- banner -->
 		<swiper :indicator-dots="true" indicator-color="white" :autoplay="true" :interval="3000" :duration="1000" :circular="true">
 			<swiper-item v-for="item in swiperList" :key="item.id">
@@ -115,6 +119,11 @@
 				this.content = res.content
 			},
 			
+			toSearch(){
+				uni.navigateTo({
+					url:'/subpkg/search/search'
+				})
+			}
 			
 
 		}
@@ -122,6 +131,15 @@
 </script>
 
 <style>
+	/* search */
+	.search-box{
+		/* 吸顶 */
+		position: sticky;
+		top:0;
+		/* 提高阶层，防止覆盖 */
+		z-index:999;
+	}
+	
 	/* swiper */
 	swiper {
 		height: 360rpx;
