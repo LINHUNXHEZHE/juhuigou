@@ -47,7 +47,11 @@
 </template>
 
 <script>
+	//导入
+	import badgeMix from '@/mixins/tabbar-badge.js'
+	
 	export default {
+		mixins:[badgeMix],
 		data() {
 			return {
 				//  banner 定义一个空数组进行接收轮播图数据

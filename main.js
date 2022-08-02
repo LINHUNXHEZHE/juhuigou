@@ -1,5 +1,9 @@
 import App from './App'
 
+//导入store实例对象
+import store from './store/store.js'
+
+
 // 导入网络请求的包
 import { $http } from '@escook/request-miniprogram'
 
@@ -32,7 +36,8 @@ import Vue from 'vue'
 Vue.config.productionTip = false
 App.mpType = 'app'
 const app = new Vue({
-    ...App
+    //store挂载到Vue实例
+    store,
 })
 app.$mount()
 // #endif

@@ -30,7 +30,11 @@
 </template>
 
 <script>
+	//导入
+	import badgeMix from '@/mixins/tabbar-badge.js'
+	
 	export default {
+		mixins:[badgeMix],
 		data() {
 			return {
 				// 当前设备的可用高度
@@ -78,7 +82,7 @@
 			toGoodsList(item3){
 				// console.log(item3)
 				uni.navigateTo({
-					url:'/subpkg/goods_detail/goods_detail?cid='+item3.c_id
+					url:'/subpkg/goods_list/goods_list?cid='+item3.c_id
 				})
 			},
 			//跳转
